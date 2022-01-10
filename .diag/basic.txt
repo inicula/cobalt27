@@ -1,0 +1,27 @@
++---------+           +-------+            +-------+
+|COPY     |           |ALBUM  |            |GROUP  |
+|album_id#<-----------+id#    <------------+id#    |
+|id#      |  copy of  |title  | composed by|name   |
++---^-----+           +---+---+            +----+--+
+    |                     |                     |
+    |                     |                     |
+    |                     |is part of           | is part of
+    | bought              |                     |
+    |                     |                     |
+    |                 +---v-----+          +----v----------+
++---+-----+           |TRACK    |          |GROUP_MEMBER   |
+|CUSTOMER |           |album_id#|          |group_id#      |
+|id#      |           |id#      |          |member_id#     |
+|name     |           +---------+          |left_group_date|
+|email    |                                +-----^---------+
+|pass_hash|                                      |
++---------+                                      |
+                                                 | is part of
+                                                 |
+                                                 |
+                                           +-----+----+             +---------+                +-------+
+                                           |ARTIST    |             |LOCATION |                |COUNTRY|
+                                           |id#       <-------------+id#      <----------------+id#    |
+                                           |first_name|  born in    |city     |   located in   |name   |
+                                           |last_name |             |         |                |       |
+                                           +----------+             +---------+                +-------+

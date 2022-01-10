@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Diagramă conceptuală</title>
+
+</head>
+
+<body style="width: 50% !important; margin-left: auto !important; margin-right: auto !important; white-space: pre-wrap; font-family: monospace; font-size: 14px;">
+
+<b>Diagrama conceptuală propusă:</b>
+
+<div>
+
+┌─────────┐           ┌───────┐            ┌───────┐
+│COPY     │           │ALBUM  │            │GROUP  │
+│album_id#◄───────────┤id#    ◄────────────┤id#    │
+│id#      │  copy of  │title  │ composed by│name   │
+└───▲─────┘           └───┬───┘            └────┬──┘
+    │                     │                     │
+    │                     │                     │
+    │                     │is part of           │ is part of
+    │ bought              │                     │
+    │                     │                     │
+    │                 ┌───▼─────┐          ┌────▼──────────┐
+┌───┴─────┐           │TRACK    │          │GROUP_MEMBER   │
+│CUSTOMER │           │album_id#│          │group_id#      │
+│id#      │           │id#      │          │member_id#     │
+│name     │           └─────────┘          │left_group_date│
+│email    │                                └─────▲─────────┘
+│pass_hash│                                      │
+└─────────┘                                      │
+                                                 │ is part of
+                                                 │
+                                                 │
+                                           ┌─────┴────┐             ┌─────────┐                ┌───────┐
+                                           │ARTIST    │             │LOCATION │                │COUNTRY│
+                                           │id#       ◄─────────────┤id#      ◄────────────────┤id#    │
+                                           │first_name│  born in    │city     │   located in   │name   │
+                                           │last_name │             │         │                │       │
+                                           └──────────┘             └─────────┘                └───────┘
+
+</div>
+</body>
+</html>
