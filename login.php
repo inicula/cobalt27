@@ -5,9 +5,9 @@ session_start();
 <html>
 <body>
 
-<h1>Sign up</h1>
+<h1>Log in</h1>
 
-<form action="signup_backend.php" method="post">
+<form action="login_backend.php" method="post">
   <label for="iemail">Email</label>
   <input type="text" id="iemail" name="iemail"><br><br>
   <label for="ipassword">Password</label>
@@ -17,7 +17,7 @@ session_start();
 
 <?php
 
-$possible_errs = array("incomplete"=>"Nu toate campurile au fost completate", "alreadytaken"=>"Emailul este deja inregistrat pe site", "invalidemail"=>"Email-ul introdus nu este valid", "goodsignup"=>"V-ati creat contul cu succes");
+$possible_errs = array("incomplete"=>"Nu toate campurile au fost completate", "invalidemail"=>"Email-ul introdus nu este valid", "doesnotexist"=>"Nu exista un cont cu combinatia de mail+parola introduse");
 
 if(isset($_GET['error']))
 {

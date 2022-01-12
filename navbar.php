@@ -14,6 +14,8 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != 'yes')
 }
 else
 {
+        printf("<li>Logged in as: %s</li>\n", $_SESSION['logged_in_as']);
+        printf("<li><a href='%s'>%s</a></li>\n", "logout.php", "Log out");
 }
 ?>
 </pre>
