@@ -17,7 +17,7 @@ session_start();
 
 <?php
 
-$possible_errs = array("incomplete"=>"Nu toate campurile au fost completate", "alreadytaken"=>"Emailul este deja inregistrat pe site");
+$possible_errs = array("incomplete"=>"Nu toate campurile au fost completate", "alreadytaken"=>"Emailul este deja inregistrat pe site", "invalidemail"=>"Email-ul introdus nu este valid", "goodsignup"=>"V-ati creat contul cu succes");
 
 if(isset($_GET['error']))
 {
